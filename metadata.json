@@ -1,0 +1,7 @@
+{
+  "name": "Remix: SafeSignal BD",
+  "description": "Multi-hazard early warning system for Bangladesh providing real-time risk analysis and multilingual alerts.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

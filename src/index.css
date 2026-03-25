@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-bg: #0F1115; /* Dark matte background */
+  --color-ink: #FFFFFF; /* Pure white text */
+  --color-line: #2A2D35; /* Subtle dark borders */
+  --color-accent: #FF6B00; /* Vibrant safety orange */
+  --color-card: #1A1D23; /* Darker card background */
+  --color-danger: #FF4444; /* Bright red */
+  --color-warning: #FFBB33; /* Bright amber */
+  --color-success: #00C851; /* Bright green */
+  --color-muted: #8E9299; /* Muted secondary text */
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+  }
+
+  /* Hardware-style grid borders */
+  .data-row {
+    @apply grid grid-cols-[40px_1.5fr_1fr_1fr] p-4 border-b border-line transition-all duration-200 cursor-pointer hover:bg-card;
+  }
+
+  .data-row.active {
+    @apply bg-accent/10 border-l-4 border-l-accent;
+  }
+
+  /* Micro-labels */
+  .col-header {
+    @apply font-mono text-[10px] text-muted uppercase tracking-[0.15em] font-medium;
+  }
+
+  /* Monospace for data values */
+  .data-value {
+    @apply font-mono tracking-tighter text-sm;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-card/80 backdrop-blur-xl border border-line;
+  }
+
+  /* Mobile Rotated Mode */
+  @media (max-width: 767px) {
+    .rotated-mode {
+      position: fixed !important;
+      top: 0 !important;
+      left: 100% !important;
+      width: 100vh !important;
+      height: 100vw !important;
+      transform: rotate(90deg) !important;
+      transform-origin: top left !important;
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      z-index: 9999 !important;
+      background: #0F1115 !important;
+    }
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap');
