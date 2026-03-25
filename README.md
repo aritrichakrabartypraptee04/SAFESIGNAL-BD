@@ -1,8 +1,8 @@
 <div align="center">
 
-This contains everything you need to run your app locally.
+This contains everything you need to run the app locally.
 
-View your app in AI Studio: https://ai.studio/apps/8e42846a-1dd9-4a75-a18f-31b27097ac53
+View app directly: https://ai.studio/apps/8e42846a-1dd9-4a75-a18f-31b27097ac53
 
 ## Run Locally
 
